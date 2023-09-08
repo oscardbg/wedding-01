@@ -1,0 +1,75 @@
+// Imports
+@use "../abstracts/" as *;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #ddd;
+  color: #111;
+  font-family: Playball, sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+// Background Image
+.bg-floral {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+}
+
+// Flower Images
+.flw {
+  position: fixed;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+@include responsify(0px) {
+  .flw {
+    width: 160px;
+    opacity: 0.8;
+    img {
+      width: 100%;
+    }
+    &-0 {
+      top: 0;
+      left: 0;
+    }
+    &-1 {
+      top: 0;
+      right: 0;
+    }
+    &-2 {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+      width: 250px;
+    }
+  }
+}
+
+@include responsify(500px) {
+  .flw {
+    width: 200px;
+    &-2 {
+      width: 300px;
+    }
+  }
+}

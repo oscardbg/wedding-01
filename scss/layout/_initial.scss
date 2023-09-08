@@ -1,0 +1,44 @@
+// Imports
+@use "../abstracts/" as *;
+
+// Main Content
+main {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+}
+
+// Section
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Section Content
+.content {
+  width: 80%;
+  border: 4px solid $primary;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 2px rgba($primary, 0.8) inset;
+  height: 85%;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+  background: {
+    image: url("../img/blueSplash1.png");
+    size: contain;
+    repeat: no-repeat;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: 4rem;
+    color: rgba(#000, 0.6);
+  }
+}
