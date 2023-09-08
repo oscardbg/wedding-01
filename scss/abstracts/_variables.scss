@@ -6,6 +6,10 @@
 // Colors
 $primary: #2a4685;
 
+// iframe sizes
+$w-sm: 300px;
+$w-md: 420px;
+
 // Mixins Declarations
 @mixin responsify($size) {
   @media screen and (min-width: $size) {

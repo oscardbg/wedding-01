@@ -1,5 +1,5 @@
 const song = document.querySelector("audio");
-window.onload = () => (song.volume = "0.2");
+window.onload = () => (song.volume = "0.4");
 
 const finalDate = new Date("January 1, 2024 12:00:00");
 
