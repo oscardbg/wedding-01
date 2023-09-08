@@ -33,3 +33,19 @@ const calcDate = () => {
 };
 
 setInterval(calcDate, 1000);
+
+const imgs = ["./img/love02.jpg", "./img/love01.jpg", "./img/love03.jpg", "./img/love04.jpg"];
+const galleryElem = getElem(".gallery img");
+
+let i = 0;
+
+const changePics = () => {
+  galleryElem.src = imgs[i];
+  if (i < imgs.length - 1) {
+    i++;
+  } else {
+    i = 0;
+  }
+};
+
+setInterval(changePics, 1500);

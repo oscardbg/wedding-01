@@ -15,30 +15,34 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-// Section Content
-.content {
-  width: 80%;
-  border: 4px solid $primary;
-  border-radius: 5px;
-  box-shadow: 0 0 4px 2px rgba($primary, 0.8) inset;
-  height: 85%;
-}
-
-.icon {
-  width: 150px;
-  height: 150px;
-  background: {
-    image: url("../img/blueSplash1.png");
-    size: contain;
-    repeat: no-repeat;
+  &:nth-child(1) {
+    .content {
+      justify-content: center;
+    }
+    img {
+      width: 95%;
+    }
   }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  i {
-    font-size: 4rem;
-    color: rgba(#000, 0.6);
+
+  // Section Content
+  .content {
+    width: 80%;
+    border: 4px solid $primary;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba($primary, 0.6) inset;
+    height: 85%;
+    background-color: rgba(#888, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include responsify(650px) {
+  section:first-child {
+    img {
+      width: 500px;
+    }
   }
 }
