@@ -14,35 +14,33 @@ section {
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   &:nth-child(1) {
     .content {
-      justify-content: center;
+      padding-top: 80px;
     }
     img {
       width: 95%;
     }
   }
+  &:not(:first-child) {
+    .content {
+      padding-top: 20px;
+    }
+  }
 
   // Section Content
   .content {
-    width: 80%;
+    width: 90%;
+    margin-top: 20px;
     border: 4px solid $primary;
     border-radius: 5px;
     box-shadow: 0 0 5px 2px rgba($primary, 0.6) inset;
-    height: 85%;
+    height: 90%;
     background-color: rgba(#888, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-}
-
-@include responsify(650px) {
-  section:first-child {
-    img {
-      width: 500px;
-    }
   }
 }

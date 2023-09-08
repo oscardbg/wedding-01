@@ -1,0 +1,26 @@
+// Imports
+@use "../abstracts/" as *;
+
+// Flowers
+@include responsify(500px) {
+  .flw {
+    width: 150px;
+  }
+}
+
+@include responsify(450px) {
+  // Names
+  section:first-child {
+    img {
+      width: 400px;
+    }
+  }
+
+  // Gallery
+  .gallery {
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
